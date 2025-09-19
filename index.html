@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameHub — Single-Player Game Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">GameHub</h1>
+      <nav class="top-nav">
+        <button id="btn-profile" class="btn small">Profile</button>
+        <button id="btn-logout" class="btn small hidden">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid" id="main">
+    <aside class="sidebar" id="sidebar">
+      <section class="auth-box" id="auth-box">
+        <h2 id="welcome-title">Welcome</h2>
+        <p id="welcome-msg">Sign in to save scores and personalize your profile.</p>
+        <div class="auth-actions">
+          <button id="btn-login" class="btn">Login / Demo</button>
+          <button id="btn-signup" class="btn btn-ghost">Create Account</button>
+        </div>
+      </section>
+
+      <section class="games-list" aria-label="Games menu">
+        <h3>Games</h3>
+        <ul id="game-list" class="list"></ul>
+      </section>
+
+      <section class="profile-summary" id="profile-summary">
+        <!-- user summary filled by JS -->
+      </section>
+
+      <section class="about">
+        <h3>About</h3>
+        <p>Front-end only GameHub. Profiles & scores persist with <code>localStorage</code>.</p>
+      </section>
+    </aside>
+
+    <section class="content" id="content" tabindex="0">
+      <div id="home" class="pane">
+        <h2>GameHub</h2>
+        <p>Play Tic-Tac-Toe, Number Guess, Memory Flip — sign in to save progress and scores.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <button class="modal-close btn small" id="auth-close" aria-label="Close">✕</button>
+      <h2 id="modal-title">Sign In</h2>
+      <form id="auth-form">
+        <label>Username<input type="text" id="auth-username" required /></label>
+        <label>Display name<input type="text" id="auth-display" /></label>
+        <label>Password<input type="password" id="auth-password" placeholder="(optional - demo only)"/></label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Sign In / Create</button>
+          <button type="button" id="auth-demo" class="btn btn-ghost">Demo Account</button>
+        </div>
+      </form>
+      <p class="small muted">This is frontend-only authentication using <code>localStorage</code>.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>GameHub • Frontend-only demo • Deploy on GitHub Pages</small>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
