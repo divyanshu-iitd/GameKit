@@ -16,7 +16,7 @@ It brings together multiple classic mini-games in one place with responsive desi
 ---
 
 ## 🚀 How to Run
-**Download or clone this repository**-git clone https://github.com/divyanshu-iit/gamekit.git
+**Download or clone this repository**-git clone https://github.com/divyanshu-iit/gameKit.git
   - cd gamekit
   - Open the game in your browser
   - Start Playing
